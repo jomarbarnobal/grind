@@ -1,0 +1,11 @@
+<h1>Stories#index</h1>
+<p>Find me in app/views/stories/index.html.erb</p>
+
+<% @stories.each do |story| %>
+  <%=story.story_title%>
+  <br>
+  <br>
+  <%= story.story_body %>
+  <br>
+  posted by : <%= story.user.email %>
+<% end %>
