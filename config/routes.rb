@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'comments/new'
+
   devise_for :users, controllers: {
     passwords: 'users/passwords',
     sessions: 'users/sessions',
@@ -15,7 +17,9 @@ Rails.application.routes.draw do
   
   root  'home#index'
 
-  resources :stories
+  resources :stories do
+    resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

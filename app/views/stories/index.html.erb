@@ -2,7 +2,7 @@
 <p>Find me in app/views/stories/index.html.erb</p>
 
 <% @stories.each do |story| %>
-  <%=story.story_title%>
+  <%= link_to story.story_title, story %>
   <br>
   <br>
   <%= story.story_body %>

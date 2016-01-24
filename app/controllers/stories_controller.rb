@@ -5,10 +5,9 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    respond_to do |format| 
-      format.html
-      format.json  { render json: @story }
-    end
+    @commentable = @story
+    @comments = @commentable.comments
+    @comment = Comment.new  
   end
   def new
     @story = current_user.stories.build

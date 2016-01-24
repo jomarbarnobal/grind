@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :stories, dependent: :destroy
+  has_many :comments, as: :commentable, dependent: :destroy
 end
