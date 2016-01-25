@@ -3,6 +3,7 @@ title: <%= @story.story_title %>
 <br>
 cotent: <%= @story.story_body %>
 <p class="story-comment-counts"> this post has <%= @comments.count %> comment </p>
+<span class="whose-comment"></span>
 <%= render "comments/form" %>
 
 <%= content_tag :div, id: "comments", data: { url: story_comments_url(@story)}, remote: true do %>

@@ -1,3 +1,8 @@
+var whoseComment = $('.whose-comment');
+
+$(whoseComment).html("<%= j @commentable.user.email%> commented on this <b><%= @commentable.story_title %></b>").fadeIn('slow').fadeOut(5000);
+
+$('.story-comment-counts').html("This story has <%=  j (pluralize(@commentable.comments.count, 'comment')) %>");
 $('#comments').append("<%= j render @comment %>");
 $('#comment_content').val('');
 $('#comment_content').focus();
