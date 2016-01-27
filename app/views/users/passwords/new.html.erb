@@ -1,16 +1,26 @@
-<h2>Forgot your password?</h2>
+<div class="sessions-content">
+  <div class="container sessions">
+    <div class="card">
+      <div class="card-content">
+        <h3 class="center flow-text">Forgot your password?</h3>
+      </div>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="card-action">        
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+          <div class="card-content center">
+            <%= f.submit "Reset password", class: 'btn' %>
+          </div>
+        </div>
+      <% end %>
+      <div class="card-action">
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>

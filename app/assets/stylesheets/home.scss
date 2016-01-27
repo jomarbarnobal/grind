@@ -1,3 +1,23 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navigation {
+  .navigation-wrapper {
+  	margin-top: 20px;
+    .nav-link {
+      li {
+        display: inline;
+        padding:10px;
+      }
+    }
+  }
+}
+
+.red.accent-2 {
+   background-color: rgba(76, 175, 80, 0.03) !important;
+}
+
+footer.page-footer {
+	background-color: #4CAF50;
+}

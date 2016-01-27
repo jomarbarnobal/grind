@@ -1,3 +1,4 @@
+<div class="container">
 title: <%= @story.story_title %>
 <br>
 <br>
@@ -9,4 +10,5 @@ cotent: <%= @story.story_body %>
 <%= content_tag :div, id: "comments", data: { url: story_comments_url(@story)}, remote: true do %>
   <%= render @comments %>
 <% end %>
+</div>
 </div>

@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:id])
+    @story = Story.friendly.find(params[:id])
     @commentable = @story
     @comments = @commentable.comments
     @comment = Comment.new  

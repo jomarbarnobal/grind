@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     get 'register', to: 'users/registrations#new'
   end
   
+  resources :users
+
   root  'home#index'
 
   resources :stories do
