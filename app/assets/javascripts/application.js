@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require materialize-sprockets
+//= require fullimage
+//= require parallax
 //= require turbolinks
-//= require_tree .

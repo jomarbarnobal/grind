@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grind</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= link_to root_path, class: 'floating-btn btn-floating btn-large waves-effect waves-light white-card' do %>
+    <% image_tag 'grind_logo46.png', class: "home-btn"%>
+  <% end %>
+
+<%= image_tag 'skate.jpg', id: 'bg' %>
+
+<div class="sessions-container container">
+  <%= yield %>
+</div>
+
+</body>
+</html>

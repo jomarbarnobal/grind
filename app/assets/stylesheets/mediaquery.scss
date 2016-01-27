@@ -1,0 +1,17 @@
+@media screen and(max-width: 992px){
+ .sessions-container.container {
+  width: 45% !important;
+ }
+}
+
+@media screen and(max-width: 768px){
+ .sessions-container.container {
+  width: 60% !important;
+ }
+}
+
+@media screen and(max-width: 600px){
+ .sessions-container.container {
+  width: 100% !important;
+ }
+}

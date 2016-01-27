@@ -1,0 +1,51 @@
+//////////////////////////////
+//  Set up to stick footer in 
+//  bottom
+///////////////////////////////
+body {
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;    
+    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f9f9f9;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/////////////////////////////////////////
+// Delete the yellow background in input 
+// when focus
+/////////////////////////////////////////
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+}
+
+//////////////////////////////
+//  Clear fix
+//////////////////////////////
+.clearfix {
+  *zoom: 1;
+  &:after,
+  &:before{
+  content: " ";
+  display: table;
+  
+  line-height: 0;
+
+  }
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+

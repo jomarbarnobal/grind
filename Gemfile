@@ -7,6 +7,8 @@ gem 'mini_magick'
 gem 'jquery-turbolinks'
 gem 'devise'
 gem 'puma'
+gem 'materialize-sass'
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
