@@ -1,6 +1,6 @@
 class Story < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :story_title, use: :slugged
+  friendly_id :story_title, use: [:slugged, :finders]
 
   belongs_to :user
 

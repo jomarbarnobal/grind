@@ -33,4 +33,5 @@ class CommentsController < ApplicationController
      klass = [Story].detect { |c| ["#{c.name.underscore}_id"] }
      @commentable = klass.find(params["#{klass.name.underscore}_id"])
   end
+
 end
