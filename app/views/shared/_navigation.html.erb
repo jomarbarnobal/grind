@@ -1,9 +1,8 @@
 <ul class="right nav-link">
-	<% if user_signed_in? %>
-		
-		<li><%= current_user.email %></li>
-		<li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
-	<% else %>
+  <% if user_signed_in? %>
+    <li><%= link_to current_user.email, current_user %></li>
+    <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
+  <% else %>
   <li><%= link_to 'login', login_path %></li>
   <li><%= link_to 'register', register_path %></li>
   <% end %>

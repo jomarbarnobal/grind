@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'dashboards/index'
+
+  get 'users/dashboard', to: 'dashboards#index'
+
   get 'comments/new'
 
   devise_for :users, controllers: {
@@ -16,6 +20,8 @@ Rails.application.routes.draw do
   end
   
   resources :users
+
+  
 
   root  'home#index'
 
